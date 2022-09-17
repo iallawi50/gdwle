@@ -5,7 +5,6 @@ const STATIC_ASSETS = [
   "/webfonts/fa-solid-900.ttf",
   "/webfonts/fa-solid-900.woff2",
   "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap",
-  "/webfonts",
   "/index.html",
   "/create.html",
   "/set.html",

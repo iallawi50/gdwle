@@ -26,7 +26,7 @@ function convertHourToMinute(now, time) {
     hour *= 60;
 
     var toMinute = hour + +t[0].split(":")[1];
-  } else if (t[0].split(":")[0] == "12") {
+  } else if (t[0].split(":")[0] == "12" && t[1] === "صباحاً") {
     hour = 0;
     var toMinute = hour + +t[0].split(":")[1];
   } else {
