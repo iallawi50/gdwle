@@ -1,6 +1,7 @@
 const CACHE_NAME = "static_cache";
 const STATIC_ASSETS = [
   "/",
+  "/css/all.min.css",
   "/index.html",
   "/create.html",
   "/set.html",
@@ -14,7 +15,6 @@ const STATIC_ASSETS = [
   "/js/settings.js",
   "/js/today.js",
   "/js/week.js",
-  "/css/all.min.css",
   "/css/normalize.css",
   "/css/settings.css",
   "/css/style.css",
@@ -24,6 +24,7 @@ const STATIC_ASSETS = [
   "/fonts/swissra-medium.ttf",
   "/webfonts/fa-solid-900.ttf",
   "/webfonts/fa-solid-900.woff2",
+  "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap",
 ];
 
 async function preCache() {
