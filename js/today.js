@@ -52,7 +52,7 @@ function createLecture(title, from, to, build, theClass) {
       msgTime = "تبدأ المحاضرة بعد ساعتين";
       timeout.style.background = "#1f581f";
     } else if (startLecture < 120 && startLecture > 60) {
-      msgTime = "تبدأ المحاضرة بعد اقل من ساعة";
+      msgTime = "تبدأ المحاضرة بعد اقل من ساعتين";
       timeout.style.background = "#1f581f";
     } else if (startLecture == 60) {
       msgTime = "تبدأ المحاضرة بعد ساعة";
