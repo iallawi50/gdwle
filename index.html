@@ -16,8 +16,6 @@
       gtag("config", "G-8MHB7RD0B1");
     </script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8291535096049703"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,36 +34,36 @@
   </head>
   <body>
     <div class="container dept">
-      <a href="today.html">
-        <div class="dept-box">
+      <!-- <a href="today.html"> -->
+        <div class="dept-box one">
           <i class="fa-solid fa-calendar-day"></i>
           <h3>جدول اليوم</h3>
           <!-- <p>عرض جدولك لهذا اليوم فقط</p> -->
         </div>
-      </a>
+      <!-- </a> -->
 
-      <a href="week.html">
-        <div class="dept-box">
+      <!-- <a href="week.html"> -->
+        <div class="dept-box two">
           <i class="fa-solid fa-calendar-days"></i>
           <h3>جدول الاسبوع</h3>
           <!-- <p>عرض جدولك الاسبوعي</p> -->
         </div>
       </a>
-      <a href="create.html">
-        <div class="dept-box">
+      <!-- <a href="create.html"> -->
+        <div class="dept-box three">
           <i class="fa-solid fa-calendar-plus"></i>
-          <h3>اضافة مادة</h3>
+          <h3>اضافة محاضرات</h3>
           <!-- <p>اضافة مادة الى جدولك</p> -->
         </div>
-      </a>
+      <!-- </a> -->
 
-      <a href="settings.html">
-        <div class="dept-box">
+      <!-- <a href="settings.html"> -->
+        <div class="dept-box four">
           <i class="fa-solid fa-gears"></i>
           <h3>الاعدادات</h3>
           <!-- <p>ضبط الجدول واضافة المواد</p> -->
         </div>
-      </a>
+      <!-- </a> -->
     </div>
 
     <script src="js/components.js"></script>
@@ -75,6 +73,23 @@
       if (navigator.serviceWorker) {
         navigator.serviceWorker.register("sw.js");
       }
+
+
+goToLink("one", "today")
+goToLink("two", "week")
+goToLink("three", "create")
+goToLink("four", "settings")
+
+      function goToLink(id, link) {
+        document.querySelector(`.${id}`).addEventListener("click", () => {
+            setTimeout(() => {
+          window.location.pathname = `${link}.html`
+        }, 300);
+      })
+      }
+
+
+
     </script>
   </body>
 </html>

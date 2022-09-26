@@ -12,7 +12,13 @@ today = today == "tue" ? "tues" : today;
 today = today == "wed" ? "wed" : today;
 today = today == "thu" ? "thurs" : today;
 let array = week[today];
-
+if (array.length === 0) {
+    let alert = document.createElement("h3");
+    alert.append("لاتوجد محاضرات لهذا اليوم");
+    alert.style.textAlign = "center";
+    alert.style.marginTop = "300px";
+    document.body.appendChild(alert);
+}
 if (!weekend) {
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
@@ -24,12 +30,6 @@ if (!weekend) {
       element.theClass
     );
   }
-} else {
-  let alert = document.createElement("h3");
-  alert.append("لاتوجد محاضرات لهذا اليوم");
-  alert.style.textAlign = "center";
-  alert.style.marginTop = "300px";
-  document.body.appendChild(alert);
 }
 function createLecture(title, from, to, build, theClass) {
   let lecture = document.createElement("div");
