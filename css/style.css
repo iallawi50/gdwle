@@ -270,7 +270,10 @@ nav a {
     width: calc((100% / 3) - 40px);
   }
 }
-
+.btnsContainer {
+  display: flex;
+  justify-content: space-between;
+}
 .addClass {
   background: var(--mainColor);
   color: white;
@@ -279,11 +282,39 @@ nav a {
   padding: 5px;
   text-decoration: none;
   width: fit-content;
-  display: block;
-  margin: 15px auto;
+  margin: 15px 0;
   padding: 10px;
   /* border-radius: 50px; */
 }
+
+
+.reset {
+  color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+  width: fit-content;
+  margin: 15px 0;
+  padding: 10px;
+  /* border-radius: 50px; */
+}
+
+
+.reset {
+  background-color: red;
+  transition: 0.3s;
+}
+
+.reset:hover{
+  background-color: rgb(185, 17, 17) !important;
+}
+
+.reset:active{
+  background-color: rgb(124, 6, 6) !important;
+}
+
+
 
 .paste {
   margin: 200px 0;

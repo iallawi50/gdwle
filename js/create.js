@@ -101,13 +101,14 @@ function showAlertSuccess(title) {
   document.body.style.overflow = "hidden";
   let alert = document.querySelector(".alert");
   alert.style.display = "block";
-  document.querySelectorAll("input").forEach((el) => {
-    el.value = "";
-  });
+  // document.querySelectorAll("input").forEach((el) => {
+  //   el.value = "";
+  // });
 
-  document.querySelectorAll("select option:first-child").forEach((el) => {
-    el.selected = true;
-  });
+  // document.querySelectorAll("select option:first-child").forEach((el) => {
+  //   el.selected = true;
+  // });
+  
 
   document.querySelector(".alert button").addEventListener("click", () => {
     alert.style.display = "none";
@@ -140,3 +141,13 @@ function showAlertError(title) {
       .classList.remove("fa-circle-xmark", "alertError");
   });
 }
+
+
+document.querySelector(".reset").addEventListener("click", ()=> {
+  document.querySelectorAll("input").forEach((el) => {
+    el.value = "";
+  });
+  document.querySelectorAll("select option:first-child").forEach((el) => {
+    el.selected = true;
+  });
+})
