@@ -64,6 +64,12 @@
           <!-- <p>ضبط الجدول واضافة المواد</p> -->
         </div>
       <!-- </a> -->
+        <div class="dept-box five">
+          <i class="fa-solid fa-address-book"></i>
+          <h3>تواصل معي</h3>
+          <!-- <p>ضبط الجدول واضافة المواد</p> -->
+        </div>
+      <!-- </a> -->
     </div>
 
     <script src="js/components.js"></script>
@@ -79,11 +85,17 @@ goToLink("one", "today")
 goToLink("two", "week")
 goToLink("three", "create")
 goToLink("four", "settings")
+goToLink("five", "https://ali-al-abdullah.netlify.app", true)
 
-      function goToLink(id, link) {
+      function goToLink(id, link, website) {
         document.querySelector(`.${id}`).addEventListener("click", () => {
             setTimeout(() => {
-          window.location.pathname = `${link}.html`
+              if (website == true) {
+                window.location.href = link;
+              } else {
+            window.location.pathname = `${link}.html`
+
+          }
         }, 300);
       })
       }
