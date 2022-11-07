@@ -57,53 +57,73 @@
         <div>
           <div class="week">
             <ul>
+              <!-- <li
+                :class="active == 'all' ? 'active' : ''"
+                @click="active = 'all'"
+              >
+                all
+              </li> -->
               <li
+                v-if="tasks.sun.length > 0"
                 :class="active == 'sun' ? 'active' : ''"
                 @click="active = 'sun'"
               >
                 الاحد
               </li>
               <li
+                v-if="tasks.mon.length > 0"
                 :class="active == 'mon' ? 'active' : ''"
                 @click="active = 'mon'"
               >
                 الاثنين
               </li>
               <li
+                v-if="tasks.tue.length > 0"
                 :class="active == 'tue' ? 'active' : ''"
                 @click="active = 'tue'"
               >
                 الثلاثاء
               </li>
               <li
+                v-if="tasks.wed.length > 0"
                 :class="active == 'wed' ? 'active' : ''"
                 @click="active = 'wed'"
               >
                 الاربعاء
               </li>
               <li
+                v-if="tasks.thu.length > 0"
                 :class="active == 'thu' ? 'active' : ''"
                 @click="active = 'thu'"
               >
                 الخميس
               </li>
               <li
+                v-if="tasks.fri.length > 0"
                 :class="active == 'fri' ? 'active' : ''"
                 @click="active = 'fri'"
               >
                 الجمعة
               </li>
               <li
+                v-if="tasks.sat.length > 0"
                 :class="active == 'sat' ? 'active' : ''"
                 @click="active = 'sat'"
               >
                 السبت
               </li>
             </ul>
-
-            <div class="task" v-for="(task, index) in tasks[active]" @click="task.done = !task.done; saveTasks()":class="task.done ? 'completed' : ''">
+ 
+            <div
+              class="task"
+              v-for="(task, index) in tasks[active]"
+              @click="task.done = !task.done; saveTasks()"
+              :class="task.done ? 'completed' : ''"
+            >
               <p>{{task.title}}</p>
-              <button @click="deleteTask(index, active)"><i class="fa-regular fa-trash-can"></i></button>
+              <button @click="deleteTask(index, active)">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -143,30 +163,25 @@
             this.saveTasks();
           },
 
-          deleteTasks: function() {
-            this.tasks = 
-            {
-            sun: [],
-            mon: [],
-            tue: [],
-            wed: [],
-            thu: [],
-            fri: [],
-            sat: [],
-          }
-          this.saveTasks();
-          }, 
+          deleteTasks: function () {
+            this.tasks = {
+              sun: [],
+              mon: [],
+              tue: [],
+              wed: [],
+              thu: [],
+              fri: [],
+              sat: [],
+            };
+            this.saveTasks();
+          },
           saveTasks: function () {
             window.localStorage.tasks = JSON.stringify(this.tasks);
           },
 
-          toggleDone: function(task) {
-
-            console.log(task)
-
-          }
-
-
+          toggleDone: function (task) {
+            console.log(task);
+          },
         },
 
         getDay: function () {},
