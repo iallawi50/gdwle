@@ -1,0 +1,101 @@
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 10px;
+}
+
+.group input,
+.group select {
+  background-color: var(--mainColor);
+  color: white;
+  border: 0;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+option:disabled {
+  color: rgba(238, 238, 238, 0.581);
+}
+.group input::placeholder {
+  color: rgba(238, 238, 238, 0.581);
+}
+.group input:focus,
+.group select:focus {
+  outline: none;
+}
+
+.group button {
+  border: none;
+  padding: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: white;
+  width: 150px;
+}
+.group button:first-of-type {
+  background-color: darkgreen;
+}
+
+.group button:last-of-type {
+  background-color: darkred;
+}
+
+
+.week {
+    /* background-color: var(--mainColor) */
+}
+.week ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+.week ul li {
+    padding: 10px;
+    margin: 5px;
+    font-size: 15px;
+    background-color: #eee;
+    color: var(--mainColor);
+    cursor: pointer;
+}
+
+.week ul li.active {
+    background-color: var(--mainColor);
+    color: #FFF;
+}
+
+:disabled {
+    opacity: 0.7;
+    cursor: no-drop !important;
+}
+
+.task {
+    background-color: #eee;
+    margin: 30px 0;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--mainColor) 5px solid;
+    cursor: pointer;
+}
+
+.task.completed {
+    background-color: var(--mainColor);
+    border-bottom: #ddd 5px solid;
+    color: white;
+    
+}
+
+.task button {
+    color: white;
+    background-color: darkred;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px 5px;
+}

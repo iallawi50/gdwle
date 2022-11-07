@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8MHB7RD0B1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8MHB7RD0B1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon" />
+    <title>جدولي - الرئيسية</title>
+    <meta
+      name="description"
+      content="موقع جدولي , يسهل عليك عرض الجدول ومعرفة مواعيد المحاضرات بكل سهولة"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tasks.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tasks">
+        <div class="group">
+          <input type="text" v-model="title" placeholder="عنوان المهمة" />
+          <select v-model="day">
+            <option value="null" selected>اليوم</option>
+            <option value="sun">الاحد</option>
+            <option value="mon">الاثنين</option>
+            <option value="tue">الثلاثاء</option>
+            <option value="wed">الاربعاء</option>
+            <option value="thu">الخميس</option>
+            <option value="fri">الجمعة</option>
+            <option value="sat">السبت</option>
+          </select>
+          <button :disabled="!title || day == 'null'" @click="addTask()">
+            أضف المهمة
+          </button>
+          <button @click="deleteTasks()">حذف جميع المهام</button>
+        </div>
+
+        <div>
+          <div class="week">
+            <ul>
+              <li
+                :class="active == 'sun' ? 'active' : ''"
+                @click="active = 'sun'"
+              >
+                الاحد
+              </li>
+              <li
+                :class="active == 'mon' ? 'active' : ''"
+                @click="active = 'mon'"
+              >
+                الاثنين
+              </li>
+              <li
+                :class="active == 'tue' ? 'active' : ''"
+                @click="active = 'tue'"
+              >
+                الثلاثاء
+              </li>
+              <li
+                :class="active == 'wed' ? 'active' : ''"
+                @click="active = 'wed'"
+              >
+                الاربعاء
+              </li>
+              <li
+                :class="active == 'thu' ? 'active' : ''"
+                @click="active = 'thu'"
+              >
+                الخميس
+              </li>
+              <li
+                :class="active == 'fri' ? 'active' : ''"
+                @click="active = 'fri'"
+              >
+                الجمعة
+              </li>
+              <li
+                :class="active == 'sat' ? 'active' : ''"
+                @click="active = 'sat'"
+              >
+                السبت
+              </li>
+            </ul>
+
+            <div class="task" v-for="(task, index) in tasks[active]" @click="task.done = !task.done; saveTasks()":class="task.done ? 'completed' : ''">
+              <p>{{task.title}}</p>
+              <button @click="deleteTask(index, active)"><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+      let tasks = new Vue({
+        el: ".tasks",
+        data: {
+          title: null,
+          today: null,
+          day: "null",
+          active: null,
+          tasks: {
+            sun: [],
+            mon: [],
+            tue: [],
+            wed: [],
+            thu: [],
+            fri: [],
+            sat: [],
+          },
+        },
+
+        methods: {
+          addTask: function () {
+            this.tasks[this.day].push({ title: this.title, done: false });
+            this.title = "";
+            this.day = "null";
+            this.saveTasks();
+          },
+          deleteTask: function (index, day) {
+            this.tasks[day].splice(index, 1);
+            this.saveTasks();
+          },
+
+          deleteTasks: function() {
+            this.tasks = 
+            {
+            sun: [],
+            mon: [],
+            tue: [],
+            wed: [],
+            thu: [],
+            fri: [],
+            sat: [],
+          }
+          this.saveTasks();
+          }, 
+          saveTasks: function () {
+            window.localStorage.tasks = JSON.stringify(this.tasks);
+          },
+
+          toggleDone: function(task) {
+
+            console.log(task)
+
+          }
+
+
+        },
+
+        getDay: function () {},
+        created() {
+          if (window.localStorage.tasks) {
+            this.tasks = JSON.parse(window.localStorage.tasks);
+          }
+          let date = new Date();
+          date = date.toString().split(" ")[0].toLowerCase();
+
+          this.active = date;
+
+          this.today = date;
+        },
+      });
+    </script>
+
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

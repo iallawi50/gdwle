@@ -65,6 +65,13 @@
         </div>
       <!-- </a> -->
         <div class="dept-box five">
+          <i class="fa-solid fa-list-check"></i>
+          <h3>قائمة المهام</h3>
+          <!-- <p>ضبط الجدول واضافة المواد</p> -->
+        </div>
+      <!-- </a> -->
+      <!-- </a> -->
+        <div class="dept-box six">
           <i class="fa-solid fa-address-book"></i>
           <h3>تواصل معي</h3>
           <!-- <p>ضبط الجدول واضافة المواد</p> -->
@@ -85,7 +92,8 @@ goToLink("one", "today")
 goToLink("two", "week")
 goToLink("three", "create")
 goToLink("four", "settings")
-goToLink("five", "https://ali-al-abdullah.netlify.app", true)
+goToLink("five", "tasks")
+goToLink("six", "https://ali-al-abdullah.netlify.app", true)
 
       function goToLink(id, link, website) {
         document.querySelector(`.${id}`).addEventListener("click", () => {
