@@ -287,7 +287,6 @@ nav a {
   /* border-radius: 50px; */
 }
 
-
 .reset {
   color: white;
   border: 0;
@@ -300,21 +299,18 @@ nav a {
   /* border-radius: 50px; */
 }
 
-
 .reset {
   background-color: red;
   transition: 0.3s;
 }
 
-.reset:hover{
+.reset:hover {
   background-color: rgb(185, 17, 17) !important;
 }
 
-.reset:active{
+.reset:active {
   background-color: rgb(124, 6, 6) !important;
 }
-
-
 
 .paste {
   margin: 200px 0;
@@ -329,6 +325,7 @@ nav a {
 }
 textarea.pastejson {
   text-align: left;
+  direction: ltr;
   border-radius: 0px;
   outline: none;
   border: 2px var(--mainColor) solid;
@@ -462,18 +459,19 @@ button.pastejson:active {
   }
 }
 
-
 .settingsLecture {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.deleteLecture, .editLecture {
+.deleteLecture,
+.editLecture {
   cursor: pointer;
   opacity: 0.7;
   transition: 0.3s;
 }
-.deleteLecture:hover, .editLecture:hover {
+.deleteLecture:hover,
+.editLecture:hover {
   opacity: 1;
   transform: scale(1.05);
 }
