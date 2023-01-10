@@ -44,10 +44,7 @@ option:disabled {
   background-color: darkred;
 }
 
-
-.week {
-    /* background-color: var(--mainColor) */
-}
+ 
 .week ul {
     display: flex;
     flex-wrap: wrap;

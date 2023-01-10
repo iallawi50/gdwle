@@ -11,6 +11,8 @@ const STATIC_ASSETS = [
   "/settings.html",
   "/today.html",
   "/week.html",
+  "/tasks.html",
+  "/vue.js",
   "/js/app.js",
   "/js/components.js",
   "/js/create.js",
@@ -22,6 +24,7 @@ const STATIC_ASSETS = [
   "/css/normalize.css",
   "/css/settings.css",
   "/css/style.css",
+  "/css/tasks.css",
   "/imgs/logo.png",
   "/imgs/tvtc.jpg",
 ];

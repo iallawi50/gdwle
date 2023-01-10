@@ -1,4 +1,25 @@
+let ad = true;
+
+
+let divAd = document.createElement("div");
+divAd.classList.add("container", "ads");
+
+aAd = document.createElement("a");
+aAd.href = "https://instagram.com/firecode.sa";
+
+imgAd = document.createElement("img");
+imgAd.src = "imgs/ADS/youtube-prem.jpg";
+
+aAd.appendChild(imgAd);
+
+divAd.appendChild(aAd);
+
+if (ad) {
+  document.body.prepend(divAd);
+}
+
 // Navbar
+
 let nav = document.createElement("nav");
 nav.classList.add("container");
 document.body.prepend(nav);
@@ -16,6 +37,12 @@ function addLink(link, name) {
   a.append(name);
   nav.appendChild(a);
 }
+
+// <div class="container ads">
+//   <a href="https://instagram.com/firecode.sa">
+//     <img src="imgs/ADS/youtube-prem.jpg" alt="" />
+//   </a>
+// </div>;
 
 // loading
 

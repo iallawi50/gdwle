@@ -83,12 +83,15 @@ nav a {
 /* a {
   text-decoration: none;
 } */
-
+.ads {
+  text-align: center;
+  margin-top: 30px;
+}
 .container.dept {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
-  padding: 100px 30px;
+  padding: 50px 30px;
 }
 
 /* 
@@ -363,7 +366,7 @@ button.pastejson:active {
 }
 
 .lecture:first-child {
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .lecture {
@@ -493,3 +496,4 @@ button.pastejson:active {
 .editLecture i {
   margin-left: 5px;
 }
+

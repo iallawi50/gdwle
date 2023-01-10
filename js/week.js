@@ -92,7 +92,7 @@ function weekLeacture(title, from, to, build, theClass, id, day) {
 
 function loadLeacture(day) {
   let array = week[day];
-
+  bblSort(array)
   let select = document.querySelector(`.${day} .day .lectures`);
   for (let index = 0; index < array.length; index++) {
     const element = array[index];

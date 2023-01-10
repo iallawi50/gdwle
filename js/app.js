@@ -1,3 +1,45 @@
+function minute(time) {
+  // lecture time
+  let t = time.split(" ");
+
+  if (t[1] === "مساءًا" && t[0].split(":")[0] != "12") {
+    var hour = +t[0].split(":")[0] + 12;
+    hour *= 60;
+
+    var toMinute = hour + +t[0].split(":")[1];
+  } else if (t[0].split(":")[0] == "12" && t[1] === "صباحاً") {
+    hour = 0;
+    var toMinute = hour + +t[0].split(":")[1];
+  } else {
+    var hour = +t[0].split(":")[0];
+    hour *= 60;
+    var toMinute = hour + +t[0].split(":")[1];
+  }
+
+  return toMinute;
+}
+
+function bblSort(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    // Last i elements are already in place
+    for (var j = 0; j < arr.length - i - 1; j++) {
+      // Checking if the item at present iteration
+      // is greater than the next iteration
+      if (minute(arr[j].from) > minute(arr[j + 1].from)) {
+        // If the condition is true then swap them
+        // var temp = arr[j];
+        // arr[j] = arr[j + 1];
+        // arr[j + 1] = temp;
+
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+
+  // Print the sorted array
+  console.log(arr);
+}
+
 // Week
 let week;
 if (window.localStorage.background && window.localStorage.color) {
@@ -61,6 +103,3 @@ function checkDate(from) {
 
   return toMinute;
 }
-
-
-

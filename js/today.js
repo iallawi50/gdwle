@@ -12,7 +12,8 @@ today = today == "tue" ? "tues" : today;
 today = today == "wed" ? "wed" : today;
 today = today == "thu" ? "thurs" : today;
 let array = week[today];
-if (array.length === 0) {
+
+if (weekend || array.length === 0) {
   let alert = document.createElement("h3");
   alert.append("لاتوجد محاضرات لهذا اليوم");
   alert.style.textAlign = "center";
@@ -20,49 +21,7 @@ if (array.length === 0) {
   document.body.appendChild(alert);
 }
 
-function minute(time) {
-  // lecture time
-  let t = time.split(" ");
-
-  if (t[1] === "مساءًا" && t[0].split(":")[0] != "12") {
-    var hour = +t[0].split(":")[0] + 12;
-    hour *= 60;
-
-    var toMinute = hour + +t[0].split(":")[1];
-  } else if (t[0].split(":")[0] == "12" && t[1] === "صباحاً") {
-    hour = 0;
-    var toMinute = hour + +t[0].split(":")[1];
-  } else {
-    var hour = +t[0].split(":")[0];
-    hour *= 60;
-    var toMinute = hour + +t[0].split(":")[1];
-  }
-
-  return toMinute;
-}
-
-function bblSort(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    // Last i elements are already in place
-    for (var j = 0; j < arr.length - i - 1; j++) {
-      // Checking if the item at present iteration
-      // is greater than the next iteration
-      if (minute(arr[j].from) > minute(arr[j + 1].from)) {
-        // If the condition is true then swap them
-        // var temp = arr[j];
-        // arr[j] = arr[j + 1];
-        // arr[j + 1] = temp;
-
-      [arr[j], arr[j + 1]] = [arr[j+1], arr[j]]
-      }
-    }
-  }
-
-  // Print the sorted array
-  console.log(arr);
-}
-
-bblSort(array)
+bblSort(array);
 
 if (!weekend) {
   for (let i = 0; i < array.length; i++) {
@@ -187,6 +146,6 @@ function createLecture(title, from, to, build, theClass) {
   description.appendChild(info);
   //   lecture.appendChild(info);
 
-  let container = document.querySelector("div.container");
+  let container = document.querySelector("div.container.today");
   container.appendChild(lecture);
 }
