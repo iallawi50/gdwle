@@ -1,4 +1,4 @@
-let ad = true;
+let ad = false;
 
 
 let divAd = document.createElement("div");
@@ -110,12 +110,12 @@ loading.appendChild(copyrightName);
 
 document.body.style.overflow = "hidden";
 
-document.body.appendChild(loading);
+// document.body.appendChild(loading);
 
-setTimeout(() => {
-  loading.style.opacity = "0%";
-  document.body.style.overflow = "auto";
-  setTimeout(() => {
-    loading.remove();
-  }, 500);
-}, 1200);
+// setTimeout(() => {
+//   loading.style.opacity = "0%";
+//   document.body.style.overflow = "auto";
+//   setTimeout(() => {
+//     loading.remove();
+//   }, 500);
+// }, 1200);
