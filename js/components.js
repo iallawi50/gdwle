@@ -108,7 +108,7 @@ copyrightName.style.bottom = "150px";
 copyrightName.append("علي حسين العبدالله");
 loading.appendChild(copyrightName);
 
-document.body.style.overflow = "hidden";
+// document.body.style.overflow = "hidden";
 
 // document.body.appendChild(loading);
 
