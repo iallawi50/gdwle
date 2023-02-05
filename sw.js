@@ -12,7 +12,7 @@ const STATIC_ASSETS = [
   "/today.html",
   "/week.html",
   "/tasks.html",
-  "/onYourWay.html",
+  "/onyourway.html",
   "/vue.js",
   "/js/app.js",
   "/js/components.js",
