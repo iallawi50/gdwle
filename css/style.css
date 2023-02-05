@@ -8,7 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-overflow: auto;
+overflow: auto !important;
 }
 
 :root {
