@@ -152,9 +152,12 @@ nav a {
   transform: scale(1.13);
 } */
 
-.container.dept .dept-box i {
+.container.dept .dept-box i, .container.dept .dept-box img {
   font-size: 60px;
   animation: icon 0.5s infinite alternate linear;
+}
+.container.dept .dept-box img {
+  width: 60px;
 }
 .container.dept .dept-box h3 {
   margin: 10px;
