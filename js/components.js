@@ -1,4 +1,4 @@
-let ad = false;
+let ad = true;
 
 
 let divAd = document.createElement("div");
@@ -108,14 +108,13 @@ copyrightName.style.bottom = "150px";
 copyrightName.append("علي حسين العبدالله");
 loading.appendChild(copyrightName);
 
-// document.body.style.overflow = "hidden";
 
-// document.body.appendChild(loading);
+document.body.appendChild(loading);
 
-// setTimeout(() => {
-//   loading.style.opacity = "0%";
-//   document.body.style.overflow = "auto";
-//   setTimeout(() => {
-//     loading.remove();
-//   }, 500);
-// }, 1200);
+setTimeout(() => {
+  loading.style.opacity = "0%";
+  document.body.style.overflow = "auto";
+  setTimeout(() => {
+    loading.remove();
+  }, 500);
+}, 1200);
