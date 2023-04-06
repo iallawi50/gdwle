@@ -100,13 +100,10 @@ function bblSort(arr) {
       }
     }
   }
-
+ 
   // Print the sorted array
-  week[element] = bblSort(week[element]);
-  if (element == "thurs") {
-    window.localStorage.week = JSON.stringify(week);
-  }
-  console.log(arr);
+
+  
 }
 
 function showAlertSuccess(title) {

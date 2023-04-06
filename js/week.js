@@ -121,10 +121,14 @@ function loadLeacture(day) {
 
 function deleteLecture(day, id) {
   showAlertWarning(week[day][id].title, id, day);
-}
+} 
 
 for (let i = 0; i < weekDays.length; i++) {
   const element = weekDays[i];
+  bblSort(week[element])
+  if (element == "thurs") {
+    window.localStorage.setItem("week", JSON.stringify(week))
+  }
   loadLeacture(element);
 }
 // loadLeacture("sun");

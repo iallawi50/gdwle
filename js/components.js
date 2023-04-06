@@ -1,4 +1,27 @@
 let ad = false;
+let logocopyright = true;
+ 
+
+if (logocopyright) {
+  let a = document.createElement("a");
+  a.href = "https://ali-alabdullah.netlify.app";
+  a.target = "_blank";
+  a.style.position = "fixed";
+  a.style.bottom = "30px";
+  a.style.left = "30px";
+  a.style.width = "60px";
+  a.style.height = "60px";
+  a.style.zIndex = "9999999";
+  a.style.borderRadius = "50%";
+  a.style.overflow = "hidden";
+
+  let img = document.createElement("img");
+  img.src = "https://ali-alabdullah.netlify.app/logo.jpg";
+  img.style.width = "100%";
+  a.appendChild(img);
+  document.body.append(a);
+}
+
 
 
 let divAd = document.createElement("div");
