@@ -1,3 +1,5 @@
+let weekDays = ["sun", "mon", "tues", "wed", "thurs"];
+
 function minute(time) {
   // lecture time
   let t = time.split(" ");
@@ -18,7 +20,6 @@ function minute(time) {
 
   return toMinute;
 }
-
 
 // Week
 let week;
@@ -101,5 +102,61 @@ function bblSort(arr) {
   }
 
   // Print the sorted array
+  week[element] = bblSort(week[element]);
+  if (element == "thurs") {
+    window.localStorage.week = JSON.stringify(week);
+  }
   console.log(arr);
+}
+
+function showAlertSuccess(title) {
+  scrollTo(0, 0);
+
+  document
+    .querySelector(".alert i")
+    .classList.add("fa-circle-check", "alertSucess");
+
+  document.querySelector(".alert h3").textContent = title;
+
+  document.body.style.overflow = "hidden";
+  let alert = document.querySelector(".alert");
+  alert.style.display = "block";
+  // document.querySelectorAll("input").forEach((el) => {
+  //   el.value = "";
+  // });
+
+  // document.querySelectorAll("select option:first-child").forEach((el) => {
+  //   el.selected = true;
+  // });
+
+  document.querySelector(".alert button").addEventListener("click", () => {
+    alert.style.display = "none";
+    document.body.style.overflow = "auto";
+
+    document
+      .querySelector(".alert i")
+      .classList.remove("fa-circle-check", "alertSucess");
+  });
+}
+
+function showAlertError(title) {
+  scrollTo(0, 0);
+  document
+    .querySelector(".alert i")
+    .classList.add("fa-circle-xmark", "alertError");
+
+  document.querySelector(".alert h3").textContent = title;
+
+  document.body.style.overflow = "hidden";
+  let alert = document.querySelector(".alert");
+  alert.style.display = "block";
+
+  document.querySelector(".alert button").addEventListener("click", () => {
+    alert.style.display = "none";
+    document.body.style.overflow = "auto";
+
+    document
+      .querySelector(".alert i")
+      .classList.remove("fa-circle-xmark", "alertError");
+  });
 }

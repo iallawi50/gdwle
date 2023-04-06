@@ -1,4 +1,4 @@
-let ad = true;
+let ad = false;
 
 
 let divAd = document.createElement("div");

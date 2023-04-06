@@ -92,7 +92,7 @@ function weekLeacture(title, from, to, build, theClass, id, day) {
 
 function loadLeacture(day) {
   let array = week[day];
-  // bblSort(array)
+
   let select = document.querySelector(`.${day} .day .lectures`);
   for (let index = 0; index < array.length; index++) {
     const element = array[index];
@@ -123,15 +123,17 @@ function deleteLecture(day, id) {
   showAlertWarning(week[day][id].title, id, day);
 }
 
-loadLeacture("sun");
-loadLeacture("mon");
-loadLeacture("tues");
-loadLeacture("wed");
-loadLeacture("thurs");
+for (let i = 0; i < weekDays.length; i++) {
+  const element = weekDays[i];
+  loadLeacture(element);
+}
+// loadLeacture("sun");
+// loadLeacture("mon");
+// loadLeacture("tues");
+// loadLeacture("wed");
+// loadLeacture("thurs");
 
 function showAlertWarning(title, id, day) {
-
-
   setTimeout(() => {
     document.body.style.overflow = "hidden";
     let alert = document.querySelector(".alert");
@@ -153,7 +155,7 @@ function showAlertWarning(title, id, day) {
         while (select.hasChildNodes()) {
           console.log(select.childNodes[0].remove());
         }
-        loadLeacture(day)
+        loadLeacture(day);
         window.localStorage.week = JSON.stringify(week);
 
         alert.style.display = "none";

@@ -26,7 +26,10 @@
       name="description"
       content="موقع جدولي , يسهل عليك عرض الجدول ومعرفة مواعيد المحاضرات بكل سهولة"
     />
-    <meta name="keywords" content="جدولي, جدول الكلية, موقع جدولي, عرض الجداول, ترتيب الجدول, تصميم جدول, جدول, جدولي الجامعة, رايات, جداول, جدول المتدرب">
+    <meta
+      name="keywords"
+      content="جدولي, جدول الكلية, موقع جدولي, عرض الجداول, ترتيب الجدول, تصميم جدول, جدول, جدولي الجامعة, رايات, جداول, جدول المتدرب"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,63 +40,69 @@
   <body>
     <div class="container dept">
       <!-- <a href="today.html"> -->
-        <div class="dept-box one">
-          <i class="fa-solid fa-calendar-day"></i>
-          <h3>جدول اليوم</h3>
-          <!-- <p>عرض جدولك لهذا اليوم فقط</p> -->
-        </div>
+      <div class="dept-box one">
+        <i class="fa-solid fa-calendar-day"></i>
+        <h3>جدول اليوم</h3>
+        <!-- <p>عرض جدولك لهذا اليوم فقط</p> -->
+      </div>
       <!-- </a> -->
 
       <!-- <a href="week.html"> -->
-        <div class="dept-box two">
-          <i class="fa-solid fa-calendar-days"></i>
-          <h3>جدول الاسبوع</h3>
-          <!-- <p>عرض جدولك الاسبوعي</p> -->
-        </div>
-      </a>
+      <div class="dept-box two">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h3>جدول الاسبوع</h3>
+        <!-- <p>عرض جدولك الاسبوعي</p> -->
+      </div>
+      <!-- </a> -->
       <!-- <a href="create.html"> -->
-        <div class="dept-box three">
-          <i class="fa-solid fa-calendar-plus"></i>
-          <h3>اضافة محاضرات</h3>
-          <!-- <p>اضافة مادة الى جدولك</p> -->
-        </div>
+      <div class="dept-box three">
+        <i class="fa-solid fa-calendar-plus"></i>
+        <h3>اضافة محاضرات</h3>
+        <!-- <p>اضافة مادة الى جدولك</p> -->
+      </div>
+      <!-- </a> -->
+      <!-- <a href="create.html"> -->
+      <div class="dept-box nine">
+        <img src="imgs/input.png" alt="" />
+        <h3>استيراد الجدول من رايات</h3>
+        <p style="color: red">قريباً</p>
+      </div>
       <!-- </a> -->
 
       <!-- <a href="settings.html"> -->
-        <div class="dept-box eight">
-          <img src="imgs/tvtc2.png"   alt=""> 
-          <h3>قناة محاضرات الكلية التقنية بالأحساء</h3>
-          <!-- <p>ضبط الجدول واضافة المواد</p> -->
-        </div>
+      <div class="dept-box eight">
+        <img src="imgs/tvtc2.png" alt="" />
+        <h3>قناة محاضرات الكلية التقنية بالأحساء</h3>
+        <!-- <p>ضبط الجدول واضافة المواد</p> -->
+      </div>
       <!-- </a> -->
 
       <!-- <a href="settings.html"> -->
-        <div class="dept-box seven">
-          <i class="fa-solid fa-car"></i>
-          <h3>على طريقك</h3>
-          <!-- <p>ضبط الجدول واضافة المواد</p> -->
-        </div>
+      <div class="dept-box seven">
+        <i class="fa-solid fa-car"></i>
+        <h3>على طريقك</h3>
+        <!-- <p>ضبط الجدول واضافة المواد</p> -->
+      </div>
       <!-- </a> -->
       <div class="dept-box five">
-          <i class="fa-solid fa-list-check"></i>
-          <h3>قائمة المهام</h3>
-          <!-- <p>ضبط الجدول واضافة المواد</p> -->
-        </div>
+        <i class="fa-solid fa-list-check"></i>
+        <h3>قائمة المهام</h3>
+        <!-- <p>ضبط الجدول واضافة المواد</p> -->
+      </div>
       <!-- <a href="settings.html"> -->
-        <div class="dept-box four">
-          <i class="fa-solid fa-gears"></i>
-          <h3>الاعدادات</h3>
-          <!-- <p>ضبط الجدول واضافة المواد</p> -->
-        </div>
+      <div class="dept-box four">
+        <i class="fa-solid fa-gears"></i>
+        <h3>الاعدادات</h3>
+        <!-- <p>ضبط الجدول واضافة المواد</p> -->
+      </div>
       <!-- </a> -->
-        
+
       <!-- </a> -->
-      <!-- </a> -->
-        <div class="dept-box six">
-          <i class="fa-solid fa-address-book"></i>
-          <h3>تواصل معي</h3>
-          <!-- <p>ضبط الجدول واضافة المواد</p> -->
-        </div>
+      <div class="dept-box six">
+        <i class="fa-solid fa-address-book"></i>
+        <h3>تواصل معي</h3>
+        <!-- <p>ضبط الجدول واضافة المواد</p> -->
+      </div>
       <!-- </a> -->
     </div>
 
@@ -105,32 +114,27 @@
         navigator.serviceWorker.register("sw.js");
       }
 
-
-goToLink("one", "today");
-goToLink("two", "week");
-goToLink("three", "create");
-goToLink("four", "settings");
-goToLink("five", "tasks");
-goToLink("seven", "onyourway");
-goToLink("six", "https://ali-alabdullah.netlify.app", true);
-goToLink("eight", "https://technologycollegecourses.netlify.app", true);
-
+      goToLink("one", "today");
+      goToLink("two", "week");
+      goToLink("three", "create");
+      goToLink("four", "settings");
+      goToLink("five", "tasks");
+      goToLink("seven", "onyourway");
+      goToLink("six", "https://ali-alabdullah.netlify.app", true);
+      goToLink("eight", "https://technologycollegecourses.netlify.app", true);
+      goToLink("nine", "import");
 
       function goToLink(id, link, website) {
         document.querySelector(`.${id}`).addEventListener("click", () => {
-            setTimeout(() => {
-              if (website == true) {
-                window.location.href = link;
-              } else {
-            window.location.pathname = `${link}.html`
-
-          }
-        }, 300);
-      })
+          setTimeout(() => {
+            if (website == true) {
+              window.location.href = link;
+            } else {
+              window.location.pathname = `${link}.html`;
+            }
+          }, 300);
+        });
       }
-
-
-
     </script>
   </body>
 </html>

@@ -156,7 +156,10 @@ nav a {
   font-size: 60px;
   animation: icon 0.5s infinite alternate linear;
 }
-.container.dept .dept-box img {
+.container.dept .dept-box.nine img {
+  width: 120px ;
+}
+.container.dept .dept-box.eight img   {
   width: 60px;
 }
 .container.dept .dept-box h3 {
@@ -165,7 +168,9 @@ nav a {
 }
 .container.dept .dept-box p {
   font-size: 15px;
+    position: relative; 
 }
+ 
 
 @keyframes icon {
   0% {
