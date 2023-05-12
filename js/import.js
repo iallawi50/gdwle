@@ -1,5 +1,471 @@
-import data from "./schedule.json" assert { type: "json" };
-let res = data[0];
+let res = {
+  442115450: {
+    sun: [
+      {
+        title: "برمجة الأجهزة الذكية - عملي",
+        theClass: "323",
+        build: "5",
+        day: "sun",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "تقنيات الانترنت المتقدمة - نظري",
+        theClass: "321",
+        build: "5",
+        day: "sun",
+        from: "11:30 صباحاً",
+        to: "01:10 مساءًا",
+      },
+      {
+        title: "مشروع - عملي",
+        theClass: "105",
+        build: "5",
+        day: "sun",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+    mon: [
+      {
+        title: "برمجة الأجهزة الذكية - عملي",
+        theClass: "323",
+        build: "5",
+        day: "mon",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "تقنيات الانترنت المتقدمة - عملي",
+        theClass: "321",
+        build: "5",
+        day: "mon",
+        from: "11:30 صباحاً",
+        to: "01:10 مساءًا",
+      },
+      {
+        title: "مشروع - عملي",
+        theClass: "105",
+        build: "5",
+        day: "mon",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+    tues: [
+      {
+        title: "برمجة الأجهزة الذكية - عملي",
+        theClass: "323",
+        build: "5",
+        day: "tues",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "تقنيات الانترنت المتقدمة - عملي",
+        theClass: "321",
+        build: "5",
+        day: "tues",
+        from: "11:30 صباحاً",
+        to: "01:10 مساءًا",
+      },
+    ],
+    wed: [
+      {
+        title: "مشروع - نظري",
+        theClass: "105",
+        build: "5",
+        day: "wed",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+    thurs: [
+      {
+        title: "برمجة الأجهزة الذكية",
+        theClass: "327",
+        build: "5",
+        day: "thurs",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "مشروع - عملي",
+        theClass: "105",
+        build: "5",
+        day: "thurs",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+  },
+  442104254: {
+    sun: [
+      {
+        title: "برمجة الأجهزة الذكية - عملي",
+        theClass: "323",
+        build: "5",
+        day: "sun",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "تقنيات الانترنت المتقدمة - نظري",
+        theClass: "321",
+        build: "5",
+        day: "sun",
+        from: "11:30 صباحاً",
+        to: "01:10 مساءًا",
+      },
+      {
+        title: "مشروع - عملي",
+        theClass: "105",
+        build: "5",
+        day: "sun",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+    mon: [
+      {
+        title: "برمجة الأجهزة الذكية - عملي",
+        theClass: "323",
+        build: "5",
+        day: "mon",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "تقنيات الانترنت المتقدمة - عملي",
+        theClass: "321",
+        build: "5",
+        day: "mon",
+        from: "11:30 صباحاً",
+        to: "01:10 مساءًا",
+      },
+      {
+        title: "مشروع - عملي",
+        theClass: "105",
+        build: "5",
+        day: "mon",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+    tues: [
+      {
+        title: "برمجة الأجهزة الذكية - عملي",
+        theClass: "323",
+        build: "5",
+        day: "tues",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "تقنيات الانترنت المتقدمة - عملي",
+        theClass: "321",
+        build: "5",
+        day: "tues",
+        from: "11:30 صباحاً",
+        to: "01:10 مساءًا",
+      },
+    ],
+    wed: [
+      {
+        title: "مشروع - نظري",
+        theClass: "105",
+        build: "5",
+        day: "wed",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+    thurs: [
+      {
+        title: "برمجة الأجهزة الذكية",
+        theClass: "327",
+        build: "5",
+        day: "thurs",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "مشروع - عملي",
+        theClass: "105",
+        build: "5",
+        day: "thurs",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+  },
+  443235953: {
+    sun: [
+      {
+        title: "احصاء",
+        theClass: "203",
+        build: "3",
+        day: "sun",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+    mon: [
+      {
+        title: "اقتصاد ",
+        theClass: "213",
+        build: "7",
+        day: "mon",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "حكومية",
+        theClass: "332",
+        build: "7",
+        day: "mon",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+      {
+        title: "E",
+        theClass: "322",
+        build: "2",
+        day: "mon",
+        from: "11:30 صباحاً",
+        to: "01:10 مساءًا",
+      },
+    ],
+    tues: [
+      {
+        title: "احصاء",
+        theClass: "326",
+        build: "3",
+        day: "tues",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+      {
+        title: "محاسبة ",
+        theClass: "333",
+        build: "7",
+        day: "tues",
+        from: "09:30 صباحاً",
+        to: "11:10 صباحاً",
+      },
+    ],
+    wed: [],
+    thurs: [],
+  },
+  442103589: {
+    sun: [
+      {
+        title: "استخدام الحاسب ",
+        theClass: "١٠٨",
+        build: "٣",
+        day: "sun",
+        from: "11:20 صباحاً",
+        to: "11:55 صباحاً",
+      },
+    ],
+    mon: [
+      {
+        title: "استخدام الحاسب",
+        theClass: "١٠٨",
+        build: "٣",
+        day: "mon",
+        from: "10:00 صباحاً",
+        to: "10:35 صباحاً",
+      },
+      {
+        title: "انجليزي ",
+        theClass: "٣٢٦",
+        build: "٢",
+        day: "mon",
+        from: "11:55 صباحاً",
+        to: "12:30 مساءًا",
+      },
+      {
+        title: "اجراءات السكرتارية ",
+        theClass: "١٠٤",
+        build: "٣",
+        day: "mon",
+        from: "12:50 مساءًا",
+        to: "01:25 مساءًا",
+      },
+      {
+        title: "الموارد البشرية ",
+        theClass: "٣٣٥",
+        build: "٧",
+        day: "mon",
+        from: "02:05 مساءًا",
+        to: "02:40 مساءًا",
+      },
+    ],
+    tues: [
+      {
+        title: "انجليزي ",
+        theClass: "٣٢٦",
+        build: "٢",
+        day: "tues",
+        from: "10:00 صباحاً",
+        to: "10:35 صباحاً",
+      },
+      {
+        title: "اجراءات السكرتارية ",
+        theClass: "٢٠٣",
+        build: "٣",
+        day: "tues",
+        from: "12:50 صباحاً",
+        to: "01:25 مساءًا",
+      },
+      {
+        title: "الموارد البشرية ",
+        theClass: "٣٣٥",
+        build: "٧",
+        day: "tues",
+        from: "02:05 مساءًا",
+        to: "02:40 مساءًا",
+      },
+    ],
+    wed: [
+      {
+        title: "استخدام الحاسب ",
+        theClass: "١٠٨",
+        build: "٣",
+        day: "wed",
+        from: "10:00 صباحاً",
+        to: "10:35 صباحاً",
+      },
+      {
+        title: "السلوك الوظيفي ",
+        theClass: "١١٨",
+        build: "٢",
+        day: "wed",
+        from: "11:20 صباحاً",
+        to: "11:55 صباحاً",
+      },
+      {
+        title: "اجراءات السكرتارية ",
+        theClass: "١٠٤",
+        build: "٣",
+        day: "wed",
+        from: "12:50 صباحاً",
+        to: "01:25 مساءًا",
+      },
+    ],
+    thurs: [
+      {
+        title: "الموارد البشرية ",
+        theClass: "٣٣٥",
+        build: "٧",
+        day: "thurs",
+        from: "11:20 صباحاً",
+        to: "11:55 مساءًا",
+      },
+    ],
+  },
+  443320880: {
+    sun: [
+      {
+        title: "التوجيه المهني والتميز",
+        theClass: "101",
+        build: "2",
+        day: "sun",
+        from: "02:20 مساءًا",
+        to: "04:00 مساءًا",
+      },
+      {
+        title: "مبادئ إدارة الأعمال",
+        theClass: "105",
+        build: "2",
+        day: "sun",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+    ],
+    mon: [
+      {
+        title: "الرياضيات",
+        theClass: "101",
+        build: "2",
+        day: "mon",
+        from: "12:20 مساءًا",
+        to: "02:00 مساءًا",
+      },
+      {
+        title: "لغة إنجليزية (1)",
+        theClass: "068",
+        build: "2",
+        day: "mon",
+        from: "09:40 صباحاً",
+        to: "11:20 صباحاً",
+      },
+      {
+        title: "مبادئ إدارة الأعمال",
+        theClass: "105",
+        build: "2",
+        day: "mon",
+        from: "07:30 صباحاً",
+        to: "09:10 صباحاً",
+      },
+    ],
+    tues: [
+      {
+        title: "الكتابة الفنية",
+        theClass: "202",
+        build: "2",
+        day: "tues",
+        from: "09:40 صباحاً",
+        to: "11:20 صباحاً",
+      },
+    ],
+    wed: [
+      {
+        title: "الرياضيات",
+        theClass: "101",
+        build: "2",
+        day: "wed",
+        from: "02:20 مساءًا",
+        to: "04:00 مساءًا",
+      },
+      {
+        title: "الرياضيات",
+        theClass: "101",
+        build: "2",
+        day: "wed",
+        from: "07:30 صباحاً",
+        to: "09:10 مساءًا",
+      },
+      {
+        title: "لغة إنجليزية (1)",
+        theClass: "068",
+        build: "2",
+        day: "wed",
+        from: "09:40 صباحاً",
+        to: "11:20 صباحاً",
+      },
+    ],
+    thurs: [
+      {
+        title: "مقدمة تطبيقات الحاسب",
+        theClass: "104",
+        build: "2",
+        day: "thurs",
+        from: "12:20 مساءًا",
+        to: "02:00 مساءًا",
+      },
+      {
+        title: "مهارات التعلم",
+        theClass: "101",
+        build: "2",
+        day: "thurs",
+        from: "02:20 مساءًا",
+        to: "04:00 مساءًا",
+      },
+    ],
+  },
+};
 
 document.querySelector(".submitStdID").addEventListener("click", () => {
   let input = document.querySelector(".stdID").value;
@@ -7,7 +473,7 @@ document.querySelector(".submitStdID").addEventListener("click", () => {
     showAlertError("الرقم التدريبي غير صالح");
     return false;
   } else {
-     week = res[`${input}`];
+    week = res[`${input}`];
     window.localStorage.week = JSON.stringify(week);
     showAlertSuccess("تم استيراد الجدول بنجاح");
   }
