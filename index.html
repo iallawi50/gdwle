@@ -78,11 +78,10 @@
       <!-- </a> -->
 
       <!-- <a href="settings.html"> -->
-      <div class="dept-box seven">
+      <!-- <div class="dept-box seven">
         <i class="fa-solid fa-car"></i>
         <h3>على طريقك</h3>
-        <!-- <p>ضبط الجدول واضافة المواد</p> -->
-      </div>
+      </div> -->
       <!-- </a> -->
       <div class="dept-box five">
         <i class="fa-solid fa-list-check"></i>
@@ -119,12 +118,12 @@
       goToLink("three", "create");
       goToLink("four", "settings");
       goToLink("five", "tasks");
-      goToLink("seven", "onyourway");
-      goToLink("six", "https://ali-alabdullah.netlify.app", true);
+      // goToLink("seven", "onyourway");
+      goToLink("six", "https://ali-hussain.sa", true);
       goToLink("eight", "https://technologycollegecourses.netlify.app", true);
       goToLink("nine", "import");
 
-      function goToLink(id, link, website) {
+      function goToLink(id, link, website ) {
         document.querySelector(`.${id}`).addEventListener("click", () => {
           setTimeout(() => {
             if (website == true) {
