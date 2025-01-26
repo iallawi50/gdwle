@@ -4,7 +4,7 @@ let logocopyright = true;
 
 if (logocopyright) {
   let a = document.createElement("a");
-  a.href = "https://ali-alabdullah.netlify.app";
+  a.href = "https://ali-hussain.sa";
   a.target = "_blank";
   a.style.position = "fixed";
   a.style.bottom = "30px";
@@ -16,7 +16,7 @@ if (logocopyright) {
   a.style.overflow = "hidden";
 
   let img = document.createElement("img");
-  img.src = "https://ali-alabdullah.netlify.app/logo.jpg";
+  img.src = "https://ali-hussain.sa/imgs/logo.png";
   img.style.width = "100%";
   a.appendChild(img);
   document.body.append(a);
